@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Open-Xchange-Frontend/karma-ox-ui",
   "devDependencies": {
     "grunt": "^0.4.5"
+  },
+  "dependencies": {
+    "appserver": "^0.3.1"
   }
 }
