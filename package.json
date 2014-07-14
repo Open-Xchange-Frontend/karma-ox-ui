@@ -1,0 +1,26 @@
+{
+  "name": "karma-ox-ui",
+  "version": "0.0.0",
+  "description": "Karma adapter for Open-Xchange App Suite UI module testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Xchange-Frontend/karma-ox-ui.git"
+  },
+  "keywords": [
+    "karma-plugin",
+    "karma-adapter"
+  ],
+  "author": "Julian Bäume <julian.baeume@open-xchange.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Open-Xchange-Frontend/karma-ox-ui/issues"
+  },
+  "homepage": "https://github.com/Open-Xchange-Frontend/karma-ox-ui",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
