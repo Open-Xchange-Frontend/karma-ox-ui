@@ -3,6 +3,9 @@ var createPattern = function(path) {
 };
 
 var loadBase = function(files, coreDir, appserverConfig, handlers) {
+    if (!coreDir) {
+        console.warn('No coreDir provided. This will lead to problems when testing modules dependent on a core UI installation.');
+    }
     var path = require('path'),
         builddir = path.resolve(coreDir),
         bootjs = createPattern(builddir + '/boot.js'),
@@ -13,6 +16,10 @@ var loadBase = function(files, coreDir, appserverConfig, handlers) {
     files.unshift(createPattern(builddir + '/precore.js'));
     files.unshift(bootjs);
     files.unshift(createPattern(__dirname + '/lib/pre_boot.js'));
+
+    if (!appserverConfig || !appserverConfig.prefixes) {
+        throw 'Cannot read appserver config. Make sure to use the latest shared-grunt-config or configure karma task to provide an "appserver" option with "prefixes" array.';
+    }
 
     appserverConfig.prefixes.push(coreDir);
     require('./lib/apploader')(handlers, appserverConfig.prefixes);
