@@ -4,7 +4,8 @@ var createPattern = function(path) {
 
 var loadBase = function(files, coreDir, appserverConfig, handlers) {
     if (!coreDir) {
-        console.warn('No coreDir provided. This will lead to problems when testing modules dependent on a core UI installation.');
+        //fall back to build/ directory if nothing is set
+        coreDir = 'build/';
     }
     var path = require('path'),
         builddir = path.resolve(coreDir),
