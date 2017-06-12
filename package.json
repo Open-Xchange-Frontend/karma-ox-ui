@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/Open-Xchange-Frontend/karma-ox-ui",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-bump": "0.0.14"
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0"
   },
   "dependencies": {
-    "appserver": "^0.5.0"
+    "appserver": "git://github.com/Open-Xchange-Frontend/appserver.git#93c30af2fc5a09e6e6dc9bdecdc9918b264889e8"
   }
 }
