@@ -25,6 +25,11 @@
     "grunt-bump": "^0.8.0"
   },
   "dependencies": {
-    "appserver": "^0.6.0"
+    "appserver": "^0.6.0",
+    "sinon-chai": "^2.11.0"
+  },
+  "peerDependencies": {
+    "chai": "^4.0",
+    "sinon": "^2.1"
   }
 }

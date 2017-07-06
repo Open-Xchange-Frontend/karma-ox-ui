@@ -17,6 +17,7 @@ var loadBase = function(files, coreDir, appserverConfig, handlers) {
     files.unshift(createPattern(builddir + '/precore.js'));
     files.unshift(bootjs);
     files.unshift(createPattern(__dirname + '/lib/pre_boot.js'));
+    files.unshift(createPattern(require.resolve('sinon-chai')));
 
     if (!appserverConfig || !appserverConfig.prefixes) {
         throw 'Cannot read appserver config. Make sure to use the latest shared-grunt-config or configure karma task to provide an "appserver" option with "prefixes" array.';
